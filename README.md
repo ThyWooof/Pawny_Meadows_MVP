@@ -1,17 +1,18 @@
-# Table of Contents
+## Table of Contents
 
-- [One Page Game Design Document](#one-page-game-design-document)
-  - [Title & Concept](#title--concept)
-  - [Genre & Platform](#genre--platform)
-  - [Objective](#objective)
-  - [Mechanics / Core Loop / Progression](#mechanics--core-loop--progression)
-  - [Narrative & Setting](#narrative--setting)
-  - [Visual & Audio Style](#visual--audio-style)
-  - [Scope & Risks](#scope--risks)
-  - [MoSCoW](#moscow)
-- [Project Sprint Tracker](#project-sprint-tracker)
-  - [Product Backlog](#product-backlog)
-  - [Last Sprint](#sprint-1)
+- [Title & Concept](#title--concept)
+- [Genre & Platform](#genre--platform)
+- [Objective & Victory Conditions](#objective--victory-conditions)
+- [Mechanics / Core Loop / Progression](#mechanics--core-loop--progression)
+  - [Player Actions & Combat](#player-actions--combat)
+  - [Town & Army Progression](#town--army-progression)
+  - [Run Structure](#run-structure)
+  - [Gameplay Flow (Design-Level)](#gameplay-flow-design-level)
+- [Narrative & Setting](#narrative--setting)
+- [Visual & Audio Style](#visual--audio-style)
+- [Scope & Risks](#scope--risks)
+- [MoSCoW — First Playable Combat MVP](#moscow--first-playable-combat-mvp)
+- [Open Design Questions](#open-design-questions)
 
 # One Page Game Design Document
 
