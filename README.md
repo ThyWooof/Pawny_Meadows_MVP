@@ -16,79 +16,116 @@
 # One Page Game Design Document
 
 ## Title & Concept
-In *Pawny Meadows*, you play as The Pawn, a small adventurer sent by the king of a failing town into a dangerous forest to gather the resources needed to help it grow. The king lends you a small part of his army for protection as you fight through hordes of enemies, expand your forces, and slowly transform your struggling home into the kingdom it deserves to become.
+
+In *Pawny Meadows*, you play as **The Pawn**, a small adventurer sent by the king of a struggling town into a dangerous forest to gather resources and help the settlement grow. The king lends The Pawn a handful of soldiers for protection. By surviving expeditions, leading a companion army, and rebuilding the town, The Pawn gradually transforms Pawniolis into a thriving kingdom.
 
 ## Genre & Platform
-**Genre:** Action roguelite with companion-army and light resource-management elements.
-**Platforms:** PC, mobile, and web.
 
-## Objective
-The player’s main objective is to help the town grow by exploring deeper into the forest, where greater dangers are matched by more valuable resources.
+**Genre:** Action roguelite with a companion-army system and light resource management.  
+**Target platforms:** PC, mobile, and web (platform support and controls to be validated during development).
 
-[comment]: <> (Separei o objetive de progression. Eles costumam ser escritos em conjunto, mas acredito que para ti, será mais fácil pensar no progression junto das mecânicas.)
+## Objective & Victory Conditions
 
-[comment]: <> (O objetivo também não é super claro. Quando é que eu ganho o jogo?)
+The player explores the forest to gather resources, improve their army, and develop **Pawniolis**.
 
-[comment]: <> (No Isaac, por exemplo, o jogo considera-se "terminado" quando ganhamos a um dos final bosses. O loop do jogo é construido em torno desse final.)
+**Narrative victory:** As the town grows, its inhabitants realize that The Pawn—not King Pawnlon V—is responsible for its recovery. At a major town-development milestone (provisionally around **50–75%** of total town progression), the townspeople overthrow the old king and crown The Pawn the new ruler. The Pawn gains a small crown as a permanent visual reward. **The coronation completes the main narrative; it is triggered by town progression, not by defeating a final boss.** The exact upgrade threshold is *TBD*.
+
+**Full progression:** Play continues after the coronation. The player can keep upgrading Pawniolis until the town reaches its maximum development and all planned classes and upgrades are unlocked. After that, forest runs remain available as open-ended endgame play.
+
+A final forest boss is a potential capstone encounter for the complete game, **not** the trigger for the coronation. Its role and implementation scope still need to be finalized.
 
 ## Mechanics / Core Loop / Progression
-The Pawn gathers resources in the forest by cutting trees for wood, mining gold, and hunting sheep for meat. He acts as the anchor of the army, with allied units staying within a limited range of him, making player positioning important during combat. The Pawn cannot directly damage enemies; combat is handled by the army.
 
-Between runs, the player returns to town to upgrade buildings, improve troop quality, expand the selection of the five starting units, and unlock deeper forest areas as the kingdom grows stronger.
+### Player Actions & Combat
 
-Progression comes from upgrading buildings, which unlock stronger troops, provide more starting-unit choices, and enable the player to reach increasingly dangerous areas of the forest by becoming more powerful.
+- The player **directly controls The Pawn's movement**. The Pawn does **not** attack or deal direct damage.
+- Allied soldiers **move and fight automatically**. The player does not issue individual attack commands in the current design.
+- The Pawn is the army's **anchor**: troops follow and stay within a limited range. The player's movement indirectly affects where the army positions and fights.
+- Most enemies engage the army. Certain **Pawn-hunting enemies** ignore soldiers and pursue The Pawn directly, so the player cannot simply hide behind the army.
+- Some enemy attacks display **visible danger zones** (for example, red areas on the ground). The player survives by **walking out of danger** before the attack occurs. There is **no dedicated dash, dodge roll, or invincibility dodge mechanic** planned.
+- Between encounters, The Pawn **cuts trees for wood, mines gold, hunts sheep for meat, and collects items** found during runs. The details of item effects are *TBD*.
 
-[comment]: <> (Escreveste pouco sobre as mecânicas de jogo. Estão em falta elementos básicos. Não consigo perceber, por exemplo, quais as mecânicas de batalha. Eu controlo o Pawn, mas não as unidades de batalha? O jogador tem algum dizer nas ações das unidades de batalha? Se for o caso que não controla o exército, quais as ações disponíveis ao jogador? Mover-se? Tens algum jogo de referência para esta mecânica que ajude o leitor a perceber melhor a tua ideia?)
+### Town & Army Progression
 
-[comment]: <> (O Progression System confunde-me um pouco. Eu posso dar upgrade aos meus buildings que disponibiliza mais troops (different classes). No entanto, no segundo parágrafo, parece que dar upgrade aos buildings é uma ação separa de expandir o teu exército.)
+Resources gathered during runs are spent in Pawniolis between expeditions:
+
+| Building | Purpose |
+| --- | --- |
+| **Main Castle** | Governs town progression and caps the upgrade level of other buildings. For example, Castle Level 2 is required before another building can reach Level 2. |
+| **Troop-class buildings** | Each troop class has a dedicated building. Rebuilding a ruined one unlocks that class; upgrading it strengthens that class. |
+| **Houses** | Building or upgrading houses increases the maximum number of soldiers the player can bring into a run. |
+
+The player starts with a **small army of approximately two or three Knights**. Other troop classes must be unlocked through their buildings. **Before each run**, the player freely chooses a mix of unlocked troop classes, up to the available army capacity.
+
+**No mid-run recruitment** is planned for the first version; it may be reconsidered later. The maximum army size, precise upgrade costs, building quantities, and troop statistics are *TBD* and will be balanced through playtesting. Other building artwork in the asset pack may be used to help the town feel complete, but it does **not** automatically imply additional systems such as town-defense battles.
+
+### Run Structure
+
+1. **Prepare in Pawniolis:** choose a starting army from unlocked classes within the current capacity.
+2. **Enter the forest:** move through encounters and resource areas, positioning the army while avoiding attacks that threaten The Pawn.
+3. **Fight and gather:** automated troops fight; The Pawn survives, chops trees, mines gold, hunts sheep, and picks up items.
+4. **Finish the expedition:** return to town with the resources earned on a successful run; the exact rules for leaving a run and what happens to collected resources on defeat remain *TBD*.
+5. **Develop Pawniolis:** restore buildings, upgrade troops, and expand army capacity, then prepare for another run.
+
+The intended larger game includes **randomized forest rooms and increasingly dangerous areas**. The exact room count and how an expedition ends are still being designed.
+
+### Gameplay Flow (Design-Level)
 
 ```mermaid
 flowchart TD
-
-A([Start Run]) --> B[Move]
-B --> C{Are there enemies nearby?}
-B --> D{Are there resources nearby?}
-
-C -- Yes --> E[Attack Enemies]
-C -- No --> B
-
-E --> G{Are all enemy units dead?}
-G -- Yes --> H([End Run])
-G -- No --> I{Player Dead?}
-
-I -- Yes --> J([Game Over])
-I -- No --> B
-
-D -- Yes --> F[Gather Resource]
-D -- No --> B
-
+    A([In Pawniolis]) --> B[Choose starting army]
+    B --> C([Begin forest run])
+    C --> D[Move and position The Pawn]
+    D --> E{What does the player encounter?}
+    E -->|Enemies| F[Army attacks automatically; Pawn repositions and avoids danger]
+    E -->|Resources or items| G[Pawn gathers or collects]
+    E -->|Clear area| H{Continue exploring or finish run?}
+    F --> I{Pawn survives?}
+    I -->|Yes| H
+    I -->|No| J[Run ends in defeat — loss rules TBD]
+    G --> H
+    H -->|Continue| D
+    H -->|Finish| K[Return to Pawniolis with earned resources]
+    K --> L[Restore and upgrade town buildings]
+    L --> M{Coronation milestone reached?}
+    M -->|Yes, first time| N[Pawn crowned King — narrative complete]
+    M -->|No / already crowned| A
+    N --> A
+    J --> A
 ```
 
-[comment]: <> (Vale a pena escrever o diagrama de fluxo do jogo para quem estiver a ler conseguir perceber melhor o "ritmo" de jogo.)
+*Note: This is a design overview rather than a finalized room-by-room state machine. In particular, run-exit and defeat-resource rules are undecided.*
 
 ## Narrative & Setting
-The struggling “Kingdom” of **Pawniolis** is, for lack of a better word, not much of a kingdom at all. Its ruler, **King Pawnlon V**, sends his most trusted — and expendable — subject into the surrounding forest to gather the resources needed for the town to grow.
 
-Entrusted with a small group of soldiers, The Pawn must face dangerous forest beasts and critters while helping Pawniolis become the kingdom it so desperately wants to be.
+The struggling “Kingdom” of **Pawniolis** is, for lack of a better word, not much of a kingdom at all. Its ruler, **King Pawnlon V**, sends his most trusted—and expendable—subject into the surrounding forest to gather the resources needed for the town to grow.
+
+Entrusted with a small group of soldiers, The Pawn faces dangerous forest beasts and critters while helping Pawniolis become the kingdom it wants to be. As the settlement prospers, its citizens recognize The Pawn's efforts and eventually choose The Pawn as their new ruler.
 
 ## Visual & Audio Style
-*Pawny Meadows* uses the **Tiny Swords** asset pack as its visual foundation, giving the game a cute, chubby and chibi-inspired fantasy style with bright colors and playful proportions.
 
-Its sound design follows the same playful direction, using simple voice-made effects such as “swoosh”, “rah” and subtle spoken footsteps. Characters communicate through short, expressive gibberish inspired by *Animal Crossing*, giving units personality without requiring full voice acting.
+*Pawny Meadows* uses the **Tiny Swords** asset pack as its visual foundation: cute, chubby, chibi-inspired fantasy characters, bright colors, and playful proportions.
+
+Audio follows the same lighthearted direction, with simple voice-made effects such as “swoosh,” “rah,” and subtle spoken footsteps. Characters communicate through short expressive gibberish inspired by *Animal Crossing*, rather than full voice acting.
 
 ## Scope & Risks
-*Pawny Meadows* aims to deliver a complete roguelite experience without exceeding the limits of a solo student project. The intended scope includes the Pawn, the companion-army system, resource gathering, randomized forest rooms, enemy encounters, progression through town upgrades, and at least one final boss to provide a complete beginning-to-end experience.
 
-The main risks are the complexity of companion AI, balancing the army around the Pawn, keeping randomized encounters interesting, and preventing the progression systems from expanding beyond the available development time.
+The **long-term goal** is a small but complete roguelite with companion combat, resource gathering, a growing town, randomized forest encounters, meaningful progression, post-coronation replayability, and potentially a final boss.
 
-These risks will be controlled by keeping troop behavior simple, limiting the number of systems required for the first complete version, and prioritizing a small but fully playable experience over additional content.
+The **first playable MVP** is intentionally narrower: establish that controlling The Pawn while an automatic companion army fights enemies is enjoyable and technically reliable. Town rebuilding, the full resource economy, and the coronation are **not requirements for the initial combat MVP**.
 
-## MoSCoW
-| Must Have | Should Have | Could Have | Won't Have |
-| --- | --- | --- | --- | 
-| Moving the Pawn | Five looping rooms | Upgrades/Unlocks
-  Units that move and attack | Randomized enemy spawns |
-  Minimal HUD with health and unit count | Different types of units (role-based AI) |
+**Primary risks:** companion navigation and AI, readability of telegraphed enemy attacks, balancing player safety against indirect army control, room variety, and feature creep. The response is to prototype core combat first, test a small set of units/enemies, and expand only after the movement and combat loop feels good.
+
+## MoSCoW — First Playable Combat MVP
+
+| Must Have | Should Have | Could Have | Won't Have (in this MVP) |
+| --- | --- | --- | --- |
+| Pawn movement and health/death | A short multi-room encounter sequence (target: five rooms) | More than one enemy behavior | Full town progression and building upgrades |
+| Small automatic army that follows and attacks | Randomized enemy spawns | Early resource-gathering interaction | Coronation and narrative ending |
+| At least one enemy that fights the army | Pawn-targeting enemy and readable danger-zone attack | Additional troop roles and simple effects | Complete forest biome, all troop classes, and full endgame |
+| Basic encounter completion/restart | Minimal HUD (health and unit count) | Basic sound feedback | Mid-run troop recruitment |
+
+*MoSCoW applies only to the **initial combat MVP**, not to every feature promised for the eventual complete game. Priorities may be adjusted after teacher feedback and testing.*
 
 # Project Sprint Tracker
 
