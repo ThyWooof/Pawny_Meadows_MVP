@@ -100,13 +100,13 @@ These risks will be controlled by keeping troop behavior simple, limiting the nu
 
 ## Sprint 1
 
-**Semana:** 12-10-2026
-**Objetivo:** Os inimigos foca-me na Unit mais próxima e atacam até a unit sair da range our morrer.
+**Week:** 12-10-2026
+**Objective:** Making enemies walk towards and attack the closest target until the target either leaves the enemy's range or dies.
 
 | Task | Status |
 |------|--------|
 | Enemy moves towards the closest Unit. | ⬜ To Do |
 | Enemy attacks the closest Unit. | ⬜ To Do |
-| Enemy stops when the Unit is out-of-range ou dead. | ⬜ To Do
+| Enemy stops when the Unit is out-of-range or is dead. | ⬜ To Do
 
 ⬜ To Do · 🟨 In Progress · ✅ Done
