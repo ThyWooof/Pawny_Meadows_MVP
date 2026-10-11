@@ -1,4 +1,4 @@
-# Índice
+# Table of Contents
 
 - [One Page Game Design Document](#one-page-game-design-document)
   - [Title & Concept](#title--concept)
