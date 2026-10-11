@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://kuxwcptpax1p"]
 
 [ext_resource type="Texture2D" uid="uid://d3oywsnyf88n5" path="res://assets/sprite_assets/pawn_sprites/Pawn_Idle.png" id="1_36sao"]
-[ext_resource type="Script" uid="uid://c8v1h2q5dt5co" path="res://scripts/pawn.gd" id="1_d5vs8"]
+[ext_resource type="Script" uid="uid://c8v1h2q5dt5co" path="res://scripts/Pawn.gd" id="1_d5vs8"]
 [ext_resource type="Texture2D" uid="uid://ddbaipmw7q45d" path="res://assets/sprite_assets/pawn_sprites/Pawn_Run.png" id="2_uwrk2"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_uwrk2"]

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bpptgwc1btt8t"]
 
-[ext_resource type="Script" uid="uid://bl55jsmbsmobr" path="res://scripts/archer.gd" id="1_ms2wu"]
+[ext_resource type="Script" uid="uid://bl55jsmbsmobr" path="res://scripts/Archer.gd" id="1_ms2wu"]
 [ext_resource type="Texture2D" uid="uid://dk8q6f164ptv0" path="res://assets/sprite_assets/troop_sprites/archer_sprites/Archer_Idle.png" id="1_vgxmi"]
 [ext_resource type="Texture2D" uid="uid://bfgl75l17p2tw" path="res://assets/sprite_assets/troop_sprites/archer_sprites/Archer_Run.png" id="2_ms2wu"]
 [ext_resource type="Texture2D" uid="uid://cnj6f3anjfscj" path="res://assets/sprite_assets/troop_sprites/archer_sprites/Archer_Shoot.png" id="3_ybh2i"]

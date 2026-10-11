@@ -242,12 +242,12 @@ position = Vector2(768, -336)
 [node name="Archer" parent="Entities/Troops" unique_id=1512910273 instance=ExtResource("10_612xx")]
 z_index = 2
 position = Vector2(888, -344)
-formation_offset = Vector2(-80, 45)
+formation_offset = Vector2(-80, 40)
 
 [node name="Archer2" parent="Entities/Troops" unique_id=219113436 instance=ExtResource("10_612xx")]
 z_index = 2
 position = Vector2(944, -408)
-formation_offset = Vector2(-80, -45)
+formation_offset = Vector2(-80, -40)
 
 [node name="Warrior" parent="Entities/Troops" unique_id=827678442 instance=ExtResource("10_r1h2i")]
 z_index = 2

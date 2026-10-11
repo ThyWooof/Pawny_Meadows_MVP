@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://rvw8hnogxbee"]
 
 [ext_resource type="Texture2D" uid="uid://dyexdfrsmcfuy" path="res://assets/sprite_assets/troop_sprites/warrior_sprites/Warrior_Attack1.png" id="1_b85yj"]
-[ext_resource type="Script" uid="uid://cgb48jyon8tyc" path="res://scripts/warrior.gd" id="1_sbvvu"]
+[ext_resource type="Script" uid="uid://cgb48jyon8tyc" path="res://scripts/Warrior.gd" id="1_sbvvu"]
 [ext_resource type="Texture2D" uid="uid://fr3m3qlyrvlo" path="res://assets/sprite_assets/troop_sprites/warrior_sprites/Warrior_Attack2.png" id="2_sbvvu"]
 [ext_resource type="Texture2D" uid="uid://ibccdqj3a8bo" path="res://assets/sprite_assets/troop_sprites/warrior_sprites/Warrior_Guard.png" id="3_cc0ag"]
 [ext_resource type="Texture2D" uid="uid://d364euv74l88r" path="res://assets/sprite_assets/troop_sprites/warrior_sprites/Warrior_Idle.png" id="4_353ep"]
