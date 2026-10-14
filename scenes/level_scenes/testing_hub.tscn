@@ -272,7 +272,7 @@ position = Vector2(64, 744)
 
 [node name="Enemy2" parent="Entities/Enemies" unique_id=327977420 instance=ExtResource("12_3tuny")]
 z_index = 2
-position = Vector2(72, -8)
+position = Vector2(72, -9)
 
 [node name="Enemy3" parent="Entities/Enemies" unique_id=1948966413 instance=ExtResource("12_3tuny")]
 z_index = 2
