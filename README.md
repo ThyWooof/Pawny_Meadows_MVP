@@ -189,8 +189,8 @@ Development is divided into distinct milestones:
 
 | Task | Status |
 |------|--------|
-| Enemy moves towards the closest Unit. | 🟨 In Progress |
-| Enemy attacks the closest Unit. | 🟨 In Progress |
+| Enemy moves towards the closest Unit. | ✅ Done |
+| Enemy attacks the closest Unit. | ✅ Done |
 | Enemy stops when the Unit is out-of-range or is dead. | ✅ Done |
 
 ⬜ To Do · 🟨 In Progress · ✅ Done
