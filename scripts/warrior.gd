@@ -1,22 +1,22 @@
 extends BaseUnit
 
-enum State {IDLE, MOVING}
-var current_state = State.IDLE
+enum state {IDLE, MOVING}
+var current_state = state.IDLE
 
 func _physics_process(_delta: float) -> void:
 	var target_position = get_formation_position()
 	
 	match current_state:
-		State.MOVING:
+		state.MOVING:
 			if global_position.distance_to(target_position) <= STOP_DISTANCE:
-				current_state = State.IDLE
+				current_state = state.IDLE
 				stop_moving()
 			else:
 				move_to(target_position)
 		
-		State.IDLE:
+		state.IDLE:
 			if global_position.distance_to(target_position) > STOP_DISTANCE:
-				current_state = State.MOVING
+				current_state = state.MOVING
 			else:
 				stop_moving()
 	
