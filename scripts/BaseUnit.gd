@@ -29,3 +29,4 @@ func move_to(target_position: Vector2) -> void:
 func stop_moving() -> void:
 	velocity = Vector2.ZERO
 	sprite.play("idle")
+	
