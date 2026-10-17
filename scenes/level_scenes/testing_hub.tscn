@@ -269,43 +269,76 @@ formation_offset = Vector2(35, 70)
 [node name="Enemy" parent="Entities/Enemies" unique_id=965539143 instance=ExtResource("12_3tuny")]
 z_index = 2
 position = Vector2(64, 744)
+speed = null
+attack_range = null
+target_group = null
 
 [node name="Enemy2" parent="Entities/Enemies" unique_id=327977420 instance=ExtResource("12_3tuny")]
 z_index = 2
 position = Vector2(72, -9)
+speed = null
+attack_range = null
+target_group = null
 
 [node name="Enemy3" parent="Entities/Enemies" unique_id=1948966413 instance=ExtResource("12_3tuny")]
 z_index = 2
 position = Vector2(176, 32)
+speed = null
+attack_range = null
+target_group = null
 
 [node name="Enemy4" parent="Entities/Enemies" unique_id=807521945 instance=ExtResource("12_3tuny")]
 z_index = 2
 position = Vector2(88, -464)
+speed = null
+attack_range = null
+target_group = null
 
 [node name="Enemy5" parent="Entities/Enemies" unique_id=1085019473 instance=ExtResource("12_3tuny")]
 z_index = 2
 position = Vector2(176, -448)
+speed = null
+attack_range = null
+target_group = null
 
 [node name="Enemy6" parent="Entities/Enemies" unique_id=683876459 instance=ExtResource("12_3tuny")]
 z_index = 2
 position = Vector2(832, -8)
+speed = null
+attack_range = null
+target_group = null
 
 [node name="Enemy7" parent="Entities/Enemies" unique_id=817909880 instance=ExtResource("12_3tuny")]
 z_index = 2
 position = Vector2(136, 816)
+speed = null
+attack_range = null
+target_group = null
 
 [node name="Enemy8" parent="Entities/Enemies" unique_id=1611794089 instance=ExtResource("12_3tuny")]
 z_index = 2
 position = Vector2(160, 728)
+speed = null
+attack_range = null
+target_group = null
 
 [node name="Enemy9" parent="Entities/Enemies" unique_id=1372406982 instance=ExtResource("12_3tuny")]
 z_index = 2
 position = Vector2(944, 824)
+speed = null
+attack_range = null
+target_group = null
 
 [node name="Enemy10" parent="Entities/Enemies" unique_id=2072321495 instance=ExtResource("12_3tuny")]
 z_index = 2
 position = Vector2(944, 728)
+speed = null
+attack_range = null
+target_group = null
 
 [node name="Enemy11" parent="Entities/Enemies" unique_id=1801201602 instance=ExtResource("12_3tuny")]
 z_index = 2
 position = Vector2(864, 776)
+speed = null
+attack_range = null
+target_group = null
