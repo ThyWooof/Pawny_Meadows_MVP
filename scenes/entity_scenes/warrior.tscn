@@ -7,9 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://d364euv74l88r" path="res://assets/sprite_assets/troop_sprites/warrior_sprites/Warrior_Idle.png" id="4_353ep"]
 [ext_resource type="Texture2D" uid="uid://b0fued18tr7x6" path="res://assets/sprite_assets/troop_sprites/warrior_sprites/Warrior_Run.png" id="5_qh0uy"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_d0u6y"]
-radius = 21.0
-height = 72.0
+[sub_resource type="CircleShape2D" id="CircleShape2D_d5vs8"]
+radius = 23.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0y5bo"]
 atlas = ExtResource("1_b85yj")
@@ -241,8 +240,8 @@ collision_mask = 12
 script = ExtResource("1_sbvvu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=585320053]
-position = Vector2(-1, 1)
-shape = SubResource("CapsuleShape2D_d0u6y")
+position = Vector2(-2, 5)
+shape = SubResource("CircleShape2D_d5vs8")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2052889016]
 sprite_frames = SubResource("SpriteFrames_g4v7s")

@@ -4,9 +4,8 @@
 [ext_resource type="Script" uid="uid://c8v1h2q5dt5co" path="res://scripts/Pawn.gd" id="1_d5vs8"]
 [ext_resource type="Texture2D" uid="uid://ddbaipmw7q45d" path="res://assets/sprite_assets/pawn_sprites/Pawn_Run.png" id="2_uwrk2"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_uwrk2"]
-radius = 23.0
-height = 65.0
+[sub_resource type="CircleShape2D" id="CircleShape2D_ksdd0"]
+radius = 19.006578
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1eugc"]
 atlas = ExtResource("1_36sao")
@@ -126,8 +125,8 @@ script = ExtResource("1_d5vs8")
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1150630095]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=686958854]
-position = Vector2(0, 1.5)
-shape = SubResource("CapsuleShape2D_uwrk2")
+position = Vector2(1, 8)
+shape = SubResource("CircleShape2D_ksdd0")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2053898663]
 sprite_frames = SubResource("SpriteFrames_g4v7s")
